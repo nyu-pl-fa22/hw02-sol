@@ -86,24 +86,32 @@ Consider the following pseudo code.
 16: }
 ```
 
-Suppose this was code for a language with the declaration-order rules
-of Scala (names must be declared before use and the static scope of a
-name is the entire block in which the name is declared). At each print
-statement, indicate which declarations of `x` and `y` are in the
-static scope (i.e., provide the line numbers of the relevant
-declarations that the occurrence of `x` and `y` refer to). Will the
-compiler accept the program or reject it with a static semantic error?
-If it is rejected, explain why. If it is accepted, what does the
-program print when `outer` is executed, assuming static scoping.
+#### Part 1
+
+1. Suppose this was code for a language with the declaration-order
+   rules of Scala (names must be declared before use and the static
+   scope of a name is the entire block in which the name is
+   declared). At each print statement (lines 6, 11, and 15), indicate
+   which declarations of `x` and `y` are in the static scope (i.e.,
+   provide the line numbers of the relevant declarations that the
+   occurrence of `x` and `y` refer to).
+
+2. Will the compiler accept the program or reject it with a static
+   semantic error?  If it is rejected, explain why. If it is accepted,
+   what does the program print when `outer` is executed, assuming
+   static scoping.
 
 Note that every `var` declaration introduces a new local variable.
 
-Repeat the exercise for a hypothetical language that follows the
-declaration-order rules of Java but supports nested subroutines. That
-is, names in this language must be declared before use, and the scope
-of a name extends from its declaration through the end of the
-block. (A nested subroutine is a function that is defined inside
-another function.)
+#### Part 2
+
+Repeat Part 1 for a hypothetical language that follows the
+declaration-order rules of Java. That is, names in this language must
+be declared before use, and the scope of a name extends from its
+declaration through the end of the block. We assume that this
+hypothetical language supports nested subroutines. A nested subroutine
+is a function that is defined inside another function like `inner` in
+`middle`.
 
 ### Problem 2 (6 Points)
 
@@ -139,8 +147,9 @@ def main () = {
 }
 ```
 
-What does this program print when `main` is executed if the language
-uses static scoping? What does it print with dynamic scoping? Why?
+1. What does this program print when `main` is executed if the language uses static scoping? 
+
+2. What does it print with dynamic scoping? Why?
 
 
 ### Problem 3 (4 Points)
@@ -222,7 +231,7 @@ int main(void) {
    general, the behavior of this program is undefined according to the
    C++ language specification.) Explain what is going on.
    
-1. What happens if the two lines
+2. What happens if the two lines
 
    ```c++
    foo(n2);

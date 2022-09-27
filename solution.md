@@ -1,30 +1,30 @@
-## Solution to Problem 1
+### Solution to Problem 1
 
-Part 1:
+#### Part 1
 
-The variables are bound as follows:
-* line 6: `x` -> line 7, `y` -> line 4
-* line 11: `x` -> line 9, `y` -> line 4
-* line 15: `x` -> line 2, `y` -> line 13
+1. The variables are bound as follows:
+   * line 6: `x` -> line 7, `y` -> line 4
+   * line 11: `x` -> line 9, `y` -> line 4
+   * line 15: `x` -> line 2, `y` -> line 13
 
-The compiler would produce a static semantic error because the
-occurrence of `x` on line 4 refers to the declaration on line 9 in
-the same block. Thus `x` on line 4 is used before its declaration,
-which is not allowed. A similar violation is on line 6.
+2. The compiler would produce a static semantic error because the
+   occurrence of `x` on line 4 refers to the declaration on line 9 in
+   the same block. Thus `x` on line 4 is used before its declaration,
+   which is not allowed. A similar violation is on line 6.
 
-Part 2:
+#### Part 2
 
-The variables are bound as follows:
-* line 6: `x` -> line 2, `y` -> line 4
-* line 11: `x` -> line 9, `y` -> line 4
-* line 15: `x` -> line 2, `y` -> line 13
+1. The variables are bound as follows:
+   * line 6: `x` -> line 2, `y` -> line 4
+   * line 11: `x` -> line 9, `y` -> line 4
+   * line 15: `x` -> line 2, `y` -> line 13
 
-The program will be accepted by the compiler.
-The program first executes the print statements on line 6 when
-`inner` is called (line 10) within `middle` (line 14). This prints `2`
-and `2`. Then the print statements on line 11 are executed after
-`inner` returns, printing `1` and `2`. Finally, the print statements
-on line 15 are executed printing `2` and `3`.
+2. The program will be accepted by the compiler.  The program first
+   executes the print statements on line 6 when `inner` is called
+   (line 10) within `middle` (line 14). This prints `2` and `2`. Then
+   the print statements on line 11 are executed after `inner` returns,
+   printing `1` and `2`. Finally, the print statements on line 15 are
+   executed printing `2` and `3`.
 
 
 ## Solution to Problem 2
